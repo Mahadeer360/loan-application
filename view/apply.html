@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Loan Application</title>
+  <style>
+    /* Reset some default browser styles */
+body, h1, h2, h3, p, ul, li, form, label, input, select, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* Header styles */
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+/* Navigation styles */
+.nav {
+  text-align: center;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-list li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.nav-list li:last-child {
+  margin-right: 0;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-list a:hover {
+  color: #ff9900;
+}
+
+/* Main content styles */
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 70px); /* Subtract header height */
+}
+
+/* Loan application form styles */
+.loan-application {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 20px;
+  width: 400px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.loan-application h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.loan-application form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.loan-application form input,
+.loan-application form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.loan-application form button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.loan-application form button:hover {
+  background-color: #555;
+}
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <div class="loan-application">
+      <h1>Apply for a Loan</h1>
+      <form action="/apply" method="post">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="amount">Loan Amount</label>
+        <input type="number" id="amount" name="amount" required>
+
+        <label for="purpose"> typeOfLoan</label>
+        <select id="purpose" name="typeOfLoan">
+          <option value="personal">Personal</option>
+          <option value="business">Business</option>
+          <option value="education">Education</option>
+        </select>
+        <input type="submit" value="submit">
+        <!--<button type="submit">Submit Application</button>-->
+      </form>
+    </div>
+  </main>
+</body>
+</html>
+
+</html>
